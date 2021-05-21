@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    schemaregistry = {
+      source = "cad/schema-registry"
+    }
+  }
+}
+
 provider "schemaregistry" {
   uri = "http://localhost:8081"
 }

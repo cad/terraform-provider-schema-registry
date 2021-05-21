@@ -14,6 +14,10 @@ darwin_amd64:
 	GOOS=darwin GOARCH=amd64 go build -o terraform-provider-schemaregistry
 	tar cvzf terraform-provider-schemaregistry_darwin_amd64.tar.gz terraform-provider-schemaregistry
 
+darwin_arm64:
+	GOOS=darwin GOARCH=arm64 go build -o terraform-provider-schemaregistry
+	tar cvzf terraform-provider-schemaregistry_darwin_arm64.tar.gz terraform-provider-schemaregistry
+
 test:
 	go build -o terraform-provider-schemaregistry
 	cp terraform-provider-schemaregistry ~/.terraform.d/plugins/
